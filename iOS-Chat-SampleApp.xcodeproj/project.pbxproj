@@ -18,9 +18,9 @@
 		4DC6E2EB2834FD3C0034E7C1 /* iOS_Chat_SampleAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6E2EA2834FD3C0034E7C1 /* iOS_Chat_SampleAppUITestsLaunchTests.swift */; };
 		4DC6E2F8283502420034E7C1 /* ChannelListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6E2F7283502420034E7C1 /* ChannelListTableViewController.swift */; };
 		4DC6E2FB2835039E0034E7C1 /* AmitySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC6E2FA2835039E0034E7C1 /* AmitySDK */; };
-		4DC6E2FE283503C30034E7C1 /* ChatLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC6E2FD283503C30034E7C1 /* ChatLayout */; };
-		4DC6E300283503C30034E7C1 /* ChatLayoutDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC6E2FF283503C30034E7C1 /* ChatLayoutDynamic */; };
-		4DC6E302283503C30034E7C1 /* ChatLayoutStatic in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC6E301283503C30034E7C1 /* ChatLayoutStatic */; };
+		4DC6E31928350FB90034E7C1 /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6E31828350FB90034E7C1 /* ChannelTableViewCell.swift */; };
+		4DC6E31C2835165A0034E7C1 /* AmityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6E31B2835165A0034E7C1 /* AmityManager.swift */; };
+		4DC6E32028351AA30034E7C1 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC6E31F28351AA30034E7C1 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +55,8 @@
 		4DC6E2E82834FD3C0034E7C1 /* iOS_Chat_SampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Chat_SampleAppUITests.swift; sourceTree = "<group>"; };
 		4DC6E2EA2834FD3C0034E7C1 /* iOS_Chat_SampleAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Chat_SampleAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4DC6E2F7283502420034E7C1 /* ChannelListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListTableViewController.swift; sourceTree = "<group>"; };
+		4DC6E31828350FB90034E7C1 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
+		4DC6E31B2835165A0034E7C1 /* AmityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DC6E300283503C30034E7C1 /* ChatLayoutDynamic in Frameworks */,
-				4DC6E2FE283503C30034E7C1 /* ChatLayout in Frameworks */,
-				4DC6E302283503C30034E7C1 /* ChatLayoutStatic in Frameworks */,
+				4DC6E32028351AA30034E7C1 /* SDWebImage in Frameworks */,
 				4DC6E2FB2835039E0034E7C1 /* AmitySDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +109,7 @@
 		4DC6E2C62834FD3A0034E7C1 /* iOS-Chat-SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				4DC6E31728350FA30034E7C1 /* cells */,
 				4DC6E2C72834FD3A0034E7C1 /* AppDelegate.swift */,
 				4DC6E2C92834FD3A0034E7C1 /* SceneDelegate.swift */,
 				4DC6E2CB2834FD3A0034E7C1 /* Login.swift */,
@@ -117,6 +118,7 @@
 				4DC6E2D22834FD3C0034E7C1 /* LaunchScreen.storyboard */,
 				4DC6E2D52834FD3C0034E7C1 /* Info.plist */,
 				4DC6E2F7283502420034E7C1 /* ChannelListTableViewController.swift */,
+				4DC6E31B2835165A0034E7C1 /* AmityManager.swift */,
 			);
 			path = "iOS-Chat-SampleApp";
 			sourceTree = "<group>";
@@ -138,6 +140,14 @@
 			path = "iOS-Chat-SampleAppUITests";
 			sourceTree = "<group>";
 		};
+		4DC6E31728350FA30034E7C1 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				4DC6E31828350FB90034E7C1 /* ChannelTableViewCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,9 +166,7 @@
 			name = "iOS-Chat-SampleApp";
 			packageProductDependencies = (
 				4DC6E2FA2835039E0034E7C1 /* AmitySDK */,
-				4DC6E2FD283503C30034E7C1 /* ChatLayout */,
-				4DC6E2FF283503C30034E7C1 /* ChatLayoutDynamic */,
-				4DC6E301283503C30034E7C1 /* ChatLayoutStatic */,
+				4DC6E31F28351AA30034E7C1 /* SDWebImage */,
 			);
 			productName = "iOS-Chat-SampleApp";
 			productReference = 4DC6E2C42834FD3A0034E7C1 /* iOS-Chat-SampleApp.app */;
@@ -234,7 +242,7 @@
 			mainGroup = 4DC6E2BB2834FD3A0034E7C1;
 			packageReferences = (
 				4DC6E2F92835039D0034E7C1 /* XCRemoteSwiftPackageReference "Amity-Social-Cloud-SDK-iOS-SwiftPM" */,
-				4DC6E2FC283503C30034E7C1 /* XCRemoteSwiftPackageReference "ChatLayout" */,
+				4DC6E31E28351AA20034E7C1 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 4DC6E2C52834FD3A0034E7C1 /* Products */;
 			projectDirPath = "";
@@ -283,6 +291,8 @@
 				4DC6E2C82834FD3A0034E7C1 /* AppDelegate.swift in Sources */,
 				4DC6E2CA2834FD3A0034E7C1 /* SceneDelegate.swift in Sources */,
 				4DC6E2F8283502420034E7C1 /* ChannelListTableViewController.swift in Sources */,
+				4DC6E31C2835165A0034E7C1 /* AmityManager.swift in Sources */,
+				4DC6E31928350FB90034E7C1 /* ChannelTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,12 +646,12 @@
 				version = 5.17.0;
 			};
 		};
-		4DC6E2FC283503C30034E7C1 /* XCRemoteSwiftPackageReference "ChatLayout" */ = {
+		4DC6E31E28351AA20034E7C1 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ekazaev/ChatLayout.git";
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 5.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -652,20 +662,10 @@
 			package = 4DC6E2F92835039D0034E7C1 /* XCRemoteSwiftPackageReference "Amity-Social-Cloud-SDK-iOS-SwiftPM" */;
 			productName = AmitySDK;
 		};
-		4DC6E2FD283503C30034E7C1 /* ChatLayout */ = {
+		4DC6E31F28351AA30034E7C1 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4DC6E2FC283503C30034E7C1 /* XCRemoteSwiftPackageReference "ChatLayout" */;
-			productName = ChatLayout;
-		};
-		4DC6E2FF283503C30034E7C1 /* ChatLayoutDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4DC6E2FC283503C30034E7C1 /* XCRemoteSwiftPackageReference "ChatLayout" */;
-			productName = ChatLayoutDynamic;
-		};
-		4DC6E301283503C30034E7C1 /* ChatLayoutStatic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4DC6E2FC283503C30034E7C1 /* XCRemoteSwiftPackageReference "ChatLayout" */;
-			productName = ChatLayoutStatic;
+			package = 4DC6E31E28351AA20034E7C1 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
