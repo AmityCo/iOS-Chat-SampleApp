@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		4DC6E2C82834FD3A0034E7C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6E2C72834FD3A0034E7C1 /* AppDelegate.swift */; };
 		4DC6E2CA2834FD3A0034E7C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6E2C92834FD3A0034E7C1 /* SceneDelegate.swift */; };
-		4DC6E2CC2834FD3A0034E7C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6E2CB2834FD3A0034E7C1 /* ViewController.swift */; };
+		4DC6E2CC2834FD3A0034E7C1 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6E2CB2834FD3A0034E7C1 /* Login.swift */; };
 		4DC6E2CF2834FD3A0034E7C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6E2CD2834FD3A0034E7C1 /* Main.storyboard */; };
 		4DC6E2D12834FD3C0034E7C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6E2D02834FD3C0034E7C1 /* Assets.xcassets */; };
 		4DC6E2D42834FD3C0034E7C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6E2D22834FD3C0034E7C1 /* LaunchScreen.storyboard */; };
 		4DC6E2DF2834FD3C0034E7C1 /* iOS_Chat_SampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6E2DE2834FD3C0034E7C1 /* iOS_Chat_SampleAppTests.swift */; };
 		4DC6E2E92834FD3C0034E7C1 /* iOS_Chat_SampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6E2E82834FD3C0034E7C1 /* iOS_Chat_SampleAppUITests.swift */; };
 		4DC6E2EB2834FD3C0034E7C1 /* iOS_Chat_SampleAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6E2EA2834FD3C0034E7C1 /* iOS_Chat_SampleAppUITestsLaunchTests.swift */; };
+		4DC6E2F8283502420034E7C1 /* ChannelListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6E2F7283502420034E7C1 /* ChannelListTableViewController.swift */; };
+		4DC6E2FB2835039E0034E7C1 /* AmitySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC6E2FA2835039E0034E7C1 /* AmitySDK */; };
+		4DC6E2FE283503C30034E7C1 /* ChatLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC6E2FD283503C30034E7C1 /* ChatLayout */; };
+		4DC6E300283503C30034E7C1 /* ChatLayoutDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC6E2FF283503C30034E7C1 /* ChatLayoutDynamic */; };
+		4DC6E302283503C30034E7C1 /* ChatLayoutStatic in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC6E301283503C30034E7C1 /* ChatLayoutStatic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +44,7 @@
 		4DC6E2C42834FD3A0034E7C1 /* iOS-Chat-SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Chat-SampleApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC6E2C72834FD3A0034E7C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DC6E2C92834FD3A0034E7C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4DC6E2CB2834FD3A0034E7C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4DC6E2CB2834FD3A0034E7C1 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		4DC6E2CE2834FD3A0034E7C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DC6E2D02834FD3C0034E7C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DC6E2D32834FD3C0034E7C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,7 @@
 		4DC6E2E42834FD3C0034E7C1 /* iOS-Chat-SampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-Chat-SampleAppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC6E2E82834FD3C0034E7C1 /* iOS_Chat_SampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Chat_SampleAppUITests.swift; sourceTree = "<group>"; };
 		4DC6E2EA2834FD3C0034E7C1 /* iOS_Chat_SampleAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Chat_SampleAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4DC6E2F7283502420034E7C1 /* ChannelListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC6E300283503C30034E7C1 /* ChatLayoutDynamic in Frameworks */,
+				4DC6E2FE283503C30034E7C1 /* ChatLayout in Frameworks */,
+				4DC6E302283503C30034E7C1 /* ChatLayoutStatic in Frameworks */,
+				4DC6E2FB2835039E0034E7C1 /* AmitySDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,11 +111,12 @@
 			children = (
 				4DC6E2C72834FD3A0034E7C1 /* AppDelegate.swift */,
 				4DC6E2C92834FD3A0034E7C1 /* SceneDelegate.swift */,
-				4DC6E2CB2834FD3A0034E7C1 /* ViewController.swift */,
+				4DC6E2CB2834FD3A0034E7C1 /* Login.swift */,
 				4DC6E2CD2834FD3A0034E7C1 /* Main.storyboard */,
 				4DC6E2D02834FD3C0034E7C1 /* Assets.xcassets */,
 				4DC6E2D22834FD3C0034E7C1 /* LaunchScreen.storyboard */,
 				4DC6E2D52834FD3C0034E7C1 /* Info.plist */,
+				4DC6E2F7283502420034E7C1 /* ChannelListTableViewController.swift */,
 			);
 			path = "iOS-Chat-SampleApp";
 			sourceTree = "<group>";
@@ -143,6 +154,12 @@
 			dependencies = (
 			);
 			name = "iOS-Chat-SampleApp";
+			packageProductDependencies = (
+				4DC6E2FA2835039E0034E7C1 /* AmitySDK */,
+				4DC6E2FD283503C30034E7C1 /* ChatLayout */,
+				4DC6E2FF283503C30034E7C1 /* ChatLayoutDynamic */,
+				4DC6E301283503C30034E7C1 /* ChatLayoutStatic */,
+			);
 			productName = "iOS-Chat-SampleApp";
 			productReference = 4DC6E2C42834FD3A0034E7C1 /* iOS-Chat-SampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +232,10 @@
 				Base,
 			);
 			mainGroup = 4DC6E2BB2834FD3A0034E7C1;
+			packageReferences = (
+				4DC6E2F92835039D0034E7C1 /* XCRemoteSwiftPackageReference "Amity-Social-Cloud-SDK-iOS-SwiftPM" */,
+				4DC6E2FC283503C30034E7C1 /* XCRemoteSwiftPackageReference "ChatLayout" */,
+			);
 			productRefGroup = 4DC6E2C52834FD3A0034E7C1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,9 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DC6E2CC2834FD3A0034E7C1 /* ViewController.swift in Sources */,
+				4DC6E2CC2834FD3A0034E7C1 /* Login.swift in Sources */,
 				4DC6E2C82834FD3A0034E7C1 /* AppDelegate.swift in Sources */,
 				4DC6E2CA2834FD3A0034E7C1 /* SceneDelegate.swift in Sources */,
+				4DC6E2F8283502420034E7C1 /* ChannelListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +626,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4DC6E2F92835039D0034E7C1 /* XCRemoteSwiftPackageReference "Amity-Social-Cloud-SDK-iOS-SwiftPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AmityCo/Amity-Social-Cloud-SDK-iOS-SwiftPM";
+			requirement = {
+				kind = exactVersion;
+				version = 5.17.0;
+			};
+		};
+		4DC6E2FC283503C30034E7C1 /* XCRemoteSwiftPackageReference "ChatLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ekazaev/ChatLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4DC6E2FA2835039E0034E7C1 /* AmitySDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DC6E2F92835039D0034E7C1 /* XCRemoteSwiftPackageReference "Amity-Social-Cloud-SDK-iOS-SwiftPM" */;
+			productName = AmitySDK;
+		};
+		4DC6E2FD283503C30034E7C1 /* ChatLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DC6E2FC283503C30034E7C1 /* XCRemoteSwiftPackageReference "ChatLayout" */;
+			productName = ChatLayout;
+		};
+		4DC6E2FF283503C30034E7C1 /* ChatLayoutDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DC6E2FC283503C30034E7C1 /* XCRemoteSwiftPackageReference "ChatLayout" */;
+			productName = ChatLayoutDynamic;
+		};
+		4DC6E301283503C30034E7C1 /* ChatLayoutStatic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DC6E2FC283503C30034E7C1 /* XCRemoteSwiftPackageReference "ChatLayout" */;
+			productName = ChatLayoutStatic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4DC6E2BC2834FD3A0034E7C1 /* Project object */;
 }

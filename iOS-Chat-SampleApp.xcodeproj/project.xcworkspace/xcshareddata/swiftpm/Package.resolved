@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AmitySDK",
+        "repositoryURL": "https://github.com/AmityCo/Amity-Social-Cloud-SDK-iOS-SwiftPM",
+        "state": {
+          "branch": null,
+          "revision": "85d8bd51a352725fbc0d216b25ea70e88cd4cfaf",
+          "version": "5.17.0"
+        }
+      },
+      {
+        "package": "ChatLayout",
+        "repositoryURL": "https://github.com/ekazaev/ChatLayout.git",
+        "state": {
+          "branch": null,
+          "revision": "f98f10dd85a841d1692739718c1eed209a3f82c7",
+          "version": "1.1.17"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
