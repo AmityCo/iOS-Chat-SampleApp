@@ -41,8 +41,8 @@ class ChatViewController: UIViewController, UITableViewDataSource {
                     cell.leftImageView.isHidden = false
                     
                     cell.rightImageView.isHidden = true
-                    cell.messageBubble.backgroundColor = UIColor.systemRed
-                    cell.label.textColor = UIColor(named: K.BrandColors.lightPurple)
+                    cell.messageBubble.backgroundColor = UIColor.lightGray
+                    cell.label.textColor = UIColor.black
                 }
         
         return cell
@@ -86,6 +86,7 @@ class ChatViewController: UIViewController, UITableViewDataSource {
         navigationItem.hidesBackButton = true
         messageRepository = AmityMessageRepository(client: AmityManager.shared.client!)
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
+        self.navigationItem.hidesBackButton = false
         
         loadMessages()
         

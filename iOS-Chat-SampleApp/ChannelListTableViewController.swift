@@ -10,8 +10,12 @@ import AmitySDK
 import SDWebImage
 class ChannelListTableViewController: UITableViewController {
     var channelRepository:AmityChannelRepository?
+    var messageRepository:AmityMessageRepository?
     var channelToken:AmityNotificationToken?
+    var messageToken:AmityNotificationToken?
     var channels:AmityCollection<AmityChannel>?
+    var messagesCollection: AmityCollection<AmityMessage>?
+    var latestMessages:[String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +24,7 @@ class ChannelListTableViewController: UITableViewController {
         print("enter channel viewdidload")
         
         self.channelRepository = AmityChannelRepository(client:AmityManager.shared.client!)
-        loadChannels()
+        self.messageRepository = AmityMessageRepository(client: AmityManager.shared.client!)
         
     }
 
@@ -37,15 +41,28 @@ class ChannelListTableViewController: UITableViewController {
             query.includeDeleted = false
         let channelCollection = self.channelRepository?.getChannels(with: query)
         self.channelToken = channelCollection?.observe({ channels, change, error in
+            print("enter observe channel")
             self.channels = channels
-            self.tableView.reloadData()
-           
+            self.latestMessages = []
+            for index in 0..<channels.count() {
+                self.messagesCollection = self.messageRepository?.getMessages(channelId: channels.object(at: UInt(index))!.channelId, includingTags: [], excludingTags: [], filterByParentId: false, parentId: nil, reverse: true)
+
+                if self.messagesCollection?.count() ?? 0 > 0, let message = self.messagesCollection?.object(at: 0),let messageBody =  message.data?["text"] as? String {
+                    print("enter get messages \(messageBody)")
+                    self.latestMessages?.append(messageBody)
+                }
+                else{
+                    self.latestMessages?.append("")
+                }
+                self.tableView.reloadData()
+                
+            }
       
         })
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        loadChannels()
         
     }
 
@@ -62,17 +79,25 @@ class ChannelListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let channel = channels!.object(at: UInt(indexPath.row))
-        print("check channel \(channel!.channelId)")
         let cell = tableView.dequeueReusableCell(withIdentifier: "channelCell", for: indexPath) as! ChannelTableViewCell
         cell.displayName.text = channel?.displayName
+        if !(self.latestMessages?.isEmpty ?? true) , indexPath.row < self.latestMessages?.count ?? 0 {
+           
+            cell.message.text = self.latestMessages?[indexPath.row]
+        }
+        else{
+            cell.message.text = ""
+        }
+       
         let dateFormatter = DateFormatter()
          
         dateFormatter.dateFormat = "HH:mm"
          
         let time = dateFormatter.string(from: channel!.updatedAt)
         cell.timeLabel.text = time
-
-        cell.avatar.sd_setImage(with: URL(string: channel!.getAvatarInfo() != nil ? channel!.getAvatarInfo()?.fileURL as! String  : ""))
+        if cell.avatar.image == nil {
+        cell.avatar.sd_setImage(with: URL(string: channel!.getAvatarInfo() != nil ? channel!.getAvatarInfo()?.fileURL as! String  : "https://fakeface.rest/face/view?minimum_age=25&maximum_age=30&t=\(Int.random(in: 0..<6))"))
+        }
         return cell
     }
     override func tableView(_ tableView: UITableView,
