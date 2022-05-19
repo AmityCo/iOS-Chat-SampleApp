@@ -21,6 +21,11 @@
 		4DC6E31928350FB90034E7C1 /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6E31828350FB90034E7C1 /* ChannelTableViewCell.swift */; };
 		4DC6E31C2835165A0034E7C1 /* AmityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6E31B2835165A0034E7C1 /* AmityManager.swift */; };
 		4DC6E32028351AA30034E7C1 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC6E31F28351AA30034E7C1 /* SDWebImage */; };
+		822EF51F28353264001E06F5 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822EF51D28353264001E06F5 /* MessageCell.swift */; };
+		822EF52028353264001E06F5 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 822EF51E28353264001E06F5 /* MessageCell.xib */; };
+		822EF522283532A7001E06F5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822EF521283532A7001E06F5 /* Message.swift */; };
+		822EF52428353336001E06F5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822EF52328353336001E06F5 /* ChatViewController.swift */; };
+		822EF52628353399001E06F5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822EF52528353399001E06F5 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,11 @@
 		4DC6E2F7283502420034E7C1 /* ChannelListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListTableViewController.swift; sourceTree = "<group>"; };
 		4DC6E31828350FB90034E7C1 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
 		4DC6E31B2835165A0034E7C1 /* AmityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityManager.swift; sourceTree = "<group>"; };
+		822EF51D28353264001E06F5 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		822EF51E28353264001E06F5 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		822EF521283532A7001E06F5 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		822EF52328353336001E06F5 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		822EF52528353399001E06F5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +129,9 @@
 				4DC6E2D52834FD3C0034E7C1 /* Info.plist */,
 				4DC6E2F7283502420034E7C1 /* ChannelListTableViewController.swift */,
 				4DC6E31B2835165A0034E7C1 /* AmityManager.swift */,
+				822EF52328353336001E06F5 /* ChatViewController.swift */,
+				822EF52528353399001E06F5 /* Constants.swift */,
+				822EF51C2835321A001E06F5 /* messagecells */,
 			);
 			path = "iOS-Chat-SampleApp";
 			sourceTree = "<group>";
@@ -146,6 +159,16 @@
 				4DC6E31828350FB90034E7C1 /* ChannelTableViewCell.swift */,
 			);
 			path = cells;
+			sourceTree = "<group>";
+		};
+		822EF51C2835321A001E06F5 /* messagecells */ = {
+			isa = PBXGroup;
+			children = (
+				822EF521283532A7001E06F5 /* Message.swift */,
+				822EF51D28353264001E06F5 /* MessageCell.swift */,
+				822EF51E28353264001E06F5 /* MessageCell.xib */,
+			);
+			path = messagecells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DC6E2D42834FD3C0034E7C1 /* LaunchScreen.storyboard in Resources */,
+				822EF52028353264001E06F5 /* MessageCell.xib in Resources */,
 				4DC6E2D12834FD3C0034E7C1 /* Assets.xcassets in Resources */,
 				4DC6E2CF2834FD3A0034E7C1 /* Main.storyboard in Resources */,
 			);
@@ -292,7 +316,11 @@
 				4DC6E2CA2834FD3A0034E7C1 /* SceneDelegate.swift in Sources */,
 				4DC6E2F8283502420034E7C1 /* ChannelListTableViewController.swift in Sources */,
 				4DC6E31C2835165A0034E7C1 /* AmityManager.swift in Sources */,
+				822EF52628353399001E06F5 /* Constants.swift in Sources */,
+				822EF522283532A7001E06F5 /* Message.swift in Sources */,
 				4DC6E31928350FB90034E7C1 /* ChannelTableViewCell.swift in Sources */,
+				822EF52428353336001E06F5 /* ChatViewController.swift in Sources */,
+				822EF51F28353264001E06F5 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

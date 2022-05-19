@@ -14,9 +14,9 @@ final class AmityManager {
     
     /// An array storing json stirng of push payload, sorted in ascending order.
     private(set) var pushPayloads: [String] = []
-    
+    var messageRepository:AmityMessageRepository?
     var postRepository: AmityPostRepository?
-    
+
     static let shared: AmityManager = AmityManager()
     
     // Production Environment

@@ -33,7 +33,7 @@ class ChannelListTableViewController: UITableViewController {
     func loadChannels() {
         let query = AmityChannelQuery()
         query.types = [AmityChannelQueryType.community]
-            query.filter = .all
+            query.filter = .userIsMember
             query.includeDeleted = false
         let channelCollection = self.channelRepository?.getChannels(with: query)
         self.channelToken = channelCollection?.observe({ channels, change, error in
@@ -77,6 +77,10 @@ class ChannelListTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView,
                             didSelectRowAt indexPath: IndexPath) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chatViewController") as! ChatViewController
+        let channel = channels!.object(at: UInt(indexPath.row))
+        vc.channelID = channel?.channelId
+        self.navigationController?.pushViewController(vc, animated: true)
         print("select row at \(indexPath.row)")
     }
 
